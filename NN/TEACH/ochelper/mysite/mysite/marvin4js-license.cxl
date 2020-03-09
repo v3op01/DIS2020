@@ -1,0 +1,469 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!--PLEASE DO NOT MODIFY THIS FILE AND BE AWARE THAT THE FILE CONTAINS CONFIDENTIAL INFORMATION.--><ChemAxon>
+    <License>
+        <Field Name="Software" Value="Marvin Applets"/>
+        <Field Name="License Term" Value="Academic Research"/>
+        <Field Name="Licensee" Value="University of Notre Dame"/>
+        <Field Name="Number of Users" Value="1"/>
+        <Field Name="Expiration Date" Value="2021-10-30"/>
+        <Field Name="Support Expiration Date" Value="2021-10-30"/>
+        <Field Name="Comment" Value="[Academia] Research"/>
+        <Restriction Name="Server Use" Value="Not Allowed"/>
+        <Signature Value="MCwCFGMKX8B0BBLpzHUFDjqhwffGhj+nAhQT97WqeSAgHOYSn5k0FJV46lzWDQ=="/>
+    </License>
+    <License>
+        <Field Name="Software" Value="Marvin Beans"/>
+        <Field Name="License Term" Value="Academic Research"/>
+        <Field Name="Licensee" Value="University of Notre Dame"/>
+        <Field Name="Number of Users" Value="1"/>
+        <Field Name="Expiration Date" Value="2021-10-30"/>
+        <Field Name="Support Expiration Date" Value="2021-10-30"/>
+        <Field Name="Comment" Value="[Academia] Research"/>
+        <Restriction Name="Server Use" Value="Not Allowed"/>
+        <Signature Value="MCwCFH404KB6T/lrgyB3QzPBOSkUJY2sAhQvXEHEgcJdZZjZCk2xGmaxO0DrYQ=="/>
+    </License>
+    <License>
+        <Field Name="Software" Value="Instant JChem"/>
+        <Field Name="License Term" Value="Academic Research"/>
+        <Field Name="Licensee" Value="University of Notre Dame"/>
+        <Field Name="Number of Users" Value="1"/>
+        <Field Name="Expiration Date" Value="2021-10-30"/>
+        <Field Name="Support Expiration Date" Value="2021-10-30"/>
+        <Field Name="Comment" Value="[Academia] Research"/>
+        <Restriction Name="B/S/P/E" Value="Enterprise"/>
+        <Restriction Name="Server Use" Value="Not Allowed"/>
+        <Signature Value="MCwCFFQIokgmZfbEhtCGq3+RJAZHkFjYAhRPUzEH09xsu6YzYn++1LiZypvhdw=="/>
+    </License>
+    <License>
+        <Field Name="Software" Value="JChem Base"/>
+        <Field Name="License Term" Value="Academic Research"/>
+        <Field Name="Licensee" Value="University of Notre Dame"/>
+        <Field Name="Number of Users" Value="1"/>
+        <Field Name="Expiration Date" Value="2021-10-30"/>
+        <Field Name="Support Expiration Date" Value="2021-10-30"/>
+        <Field Name="Comment" Value="[Academia] Research"/>
+        <Restriction Name="Search/Min" Value="Unlimited"/>
+        <Restriction Name="Server Use" Value="Not Allowed"/>
+        <Signature Value="MCwCFGXChofP7OjxHwAXM3ScUCSItscmAhQ1Zs1iweIaC01R3NcpnY2jdHWj3A=="/>
+    </License>
+    <License>
+        <Field Name="Software" Value="Standardizer"/>
+        <Field Name="License Term" Value="Academic Research"/>
+        <Field Name="Licensee" Value="University of Notre Dame"/>
+        <Field Name="Number of Users" Value="1"/>
+        <Field Name="Expiration Date" Value="2021-10-30"/>
+        <Field Name="Support Expiration Date" Value="2021-10-30"/>
+        <Field Name="Comment" Value="[Academia] Research"/>
+        <Restriction Name="B/S/P/E" Value="Standard"/>
+        <Restriction Name="Server Use" Value="Not Allowed"/>
+        <Signature Value="MCwCFAXjKSk20BjCuVeLnIWM+63l0k9ZAhR6T/iwr3xASntUIL54Cgm9C/1odw=="/>
+    </License>
+    <License>
+        <Field Name="Software" Value="Screen"/>
+        <Field Name="License Term" Value="Academic Research"/>
+        <Field Name="Licensee" Value="University of Notre Dame"/>
+        <Field Name="Number of Users" Value="1"/>
+        <Field Name="Expiration Date" Value="2021-10-30"/>
+        <Field Name="Support Expiration Date" Value="2021-10-30"/>
+        <Field Name="Comment" Value="[Academia] Research"/>
+        <Restriction Name="Server Use" Value="Not Allowed"/>
+        <Signature Value="MCwCFG+bjvFYVI4cY8ZMjTWb6OkJROx+AhQIM00Pl8QXsEE7VutgUPHbz4QY9Q=="/>
+    </License>
+    <License>
+        <Field Name="Software" Value="Reactor"/>
+        <Field Name="License Term" Value="Academic Research"/>
+        <Field Name="Licensee" Value="University of Notre Dame"/>
+        <Field Name="Number of Users" Value="1"/>
+        <Field Name="Expiration Date" Value="2021-10-30"/>
+        <Field Name="Support Expiration Date" Value="2021-10-30"/>
+        <Field Name="Comment" Value="[Academia] Research"/>
+        <Restriction Name="Server Use" Value="Not Allowed"/>
+        <Signature Value="MCwCFCczMS8H+kz69poD+lcvBMHRNMGMAhQrYVPD3+gEt0T7itvgSRyqbOAd3A=="/>
+    </License>
+    <License>
+        <Field Name="Software" Value="JKlustor"/>
+        <Field Name="License Term" Value="Academic Research"/>
+        <Field Name="Licensee" Value="University of Notre Dame"/>
+        <Field Name="Number of Users" Value="1"/>
+        <Field Name="Expiration Date" Value="2021-10-30"/>
+        <Field Name="Support Expiration Date" Value="2021-10-30"/>
+        <Field Name="Comment" Value="[Academia] Research"/>
+        <Restriction Name="B/S/P/E" Value="Standard"/>
+        <Restriction Name="Server Use" Value="Not Allowed"/>
+        <Signature Value="MCwCFBPa3lr6vO4/dV7t8SVT5ZxpEYyIAhRoVPqt5zFd+oLT6lhdMsyW5W5JMg=="/>
+    </License>
+    <License>
+        <Field Name="Software" Value="Metabolizer"/>
+        <Field Name="License Term" Value="Academic Research"/>
+        <Field Name="Licensee" Value="University of Notre Dame"/>
+        <Field Name="Number of Users" Value="1"/>
+        <Field Name="Expiration Date" Value="2021-10-30"/>
+        <Field Name="Support Expiration Date" Value="2021-10-30"/>
+        <Field Name="Comment" Value="[Academia] Research"/>
+        <Restriction Name="Server Use" Value="Not Allowed"/>
+        <Signature Value="MCwCFCjM6cpV6mtfEvGFzi+OACT/idGAAhRWUTJwryZULHZ6x7Jl8QnFIV0RIA=="/>
+    </License>
+    <License>
+        <Field Name="Software" Value="Markush Search"/>
+        <Field Name="License Term" Value="Academic Research"/>
+        <Field Name="Licensee" Value="University of Notre Dame"/>
+        <Field Name="Number of Users" Value="1"/>
+        <Field Name="Expiration Date" Value="2021-10-30"/>
+        <Field Name="Support Expiration Date" Value="2021-10-30"/>
+        <Field Name="Comment" Value="[Academia] Research"/>
+        <Restriction Name="Server Use" Value="Not Allowed"/>
+        <Signature Value="MCwCFHW3XDh/Ci+Ljwx2kFVn+rX5LjAIAhQHt/aKMqmzfbHXBTwZeYSLv7gVmA=="/>
+    </License>
+    <License>
+        <Field Name="Software" Value="Protonation Plugin Group"/>
+        <Field Name="License Term" Value="Academic Research"/>
+        <Field Name="Licensee" Value="University of Notre Dame"/>
+        <Field Name="Number of Users" Value="1"/>
+        <Field Name="Expiration Date" Value="2021-10-30"/>
+        <Field Name="Support Expiration Date" Value="2021-10-30"/>
+        <Field Name="Comment" Value="[Academia] Research"/>
+        <Restriction Name="Server Use" Value="Not Allowed"/>
+        <Signature Value="MC0CFQCKc+zulo4EMHj2xdnis3/twyFUagIUZeJOURLmHWkYPyAKrADpysFCVaY="/>
+    </License>
+    <License>
+        <Field Name="Software" Value="Partitioning Plugin Group"/>
+        <Field Name="License Term" Value="Academic Research"/>
+        <Field Name="Licensee" Value="University of Notre Dame"/>
+        <Field Name="Number of Users" Value="1"/>
+        <Field Name="Expiration Date" Value="2021-10-30"/>
+        <Field Name="Support Expiration Date" Value="2021-10-30"/>
+        <Field Name="Comment" Value="[Academia] Research"/>
+        <Restriction Name="Server Use" Value="Not Allowed"/>
+        <Signature Value="MCwCFCWo3DgTmiNPqx/cDOfOrTzfeVpdAhQU44fPs8TSXc3VhXG2iztDnY0vJA=="/>
+    </License>
+    <License>
+        <Field Name="Software" Value="Isomers Plugin Group"/>
+        <Field Name="License Term" Value="Academic Research"/>
+        <Field Name="Licensee" Value="University of Notre Dame"/>
+        <Field Name="Number of Users" Value="1"/>
+        <Field Name="Expiration Date" Value="2021-10-30"/>
+        <Field Name="Support Expiration Date" Value="2021-10-30"/>
+        <Field Name="Comment" Value="[Academia] Research"/>
+        <Restriction Name="Server Use" Value="Not Allowed"/>
+        <Signature Value="MC0CFAuMjnZvFrHZNVgSNgB7iG8oO3FnAhUAifmQ123kmdL11L/mTypTti22ods="/>
+    </License>
+    <License>
+        <Field Name="Software" Value="Markush Enumeration Plugin"/>
+        <Field Name="License Term" Value="Academic Research"/>
+        <Field Name="Licensee" Value="University of Notre Dame"/>
+        <Field Name="Number of Users" Value="1"/>
+        <Field Name="Expiration Date" Value="2021-10-30"/>
+        <Field Name="Support Expiration Date" Value="2021-10-30"/>
+        <Field Name="Comment" Value="[Academia] Research"/>
+        <Restriction Name="Server Use" Value="Not Allowed"/>
+        <Signature Value="MCwCFFdD7e8pCrV5aEXR55B3qVvoL2b1AhRN6Gr+ZNFAwNYqn+bgudPnXqIQfA=="/>
+    </License>
+    <License>
+        <Field Name="Software" Value="Structure to Name Plugin"/>
+        <Field Name="License Term" Value="Academic Research"/>
+        <Field Name="Licensee" Value="University of Notre Dame"/>
+        <Field Name="Number of Users" Value="1"/>
+        <Field Name="Expiration Date" Value="2021-10-30"/>
+        <Field Name="Support Expiration Date" Value="2021-10-30"/>
+        <Field Name="Comment" Value="[Academia] Research"/>
+        <Restriction Name="Server Use" Value="Not Allowed"/>
+        <Signature Value="MC0CFFaN28SWHe+tfcTPoy1a5NMaiUMvAhUAiX+fHfVACnMFzGFr31uSmV4esKM="/>
+    </License>
+    <License>
+        <Field Name="Software" Value="Name to Structure"/>
+        <Field Name="License Term" Value="Academic Research"/>
+        <Field Name="Licensee" Value="University of Notre Dame"/>
+        <Field Name="Number of Users" Value="1"/>
+        <Field Name="Expiration Date" Value="2021-10-30"/>
+        <Field Name="Support Expiration Date" Value="2021-10-30"/>
+        <Field Name="Comment" Value="[Academia] Research"/>
+        <Restriction Name="Server Use" Value="Not Allowed"/>
+        <Signature Value="MC0CFQCAfRdSnPugFOUvUPz/cwKzVMUiNwIUF4pFmeC9AF0OJPKsn8imVVMcqsc="/>
+    </License>
+    <License>
+        <Field Name="Software" Value="JChem for Excel"/>
+        <Field Name="License Term" Value="Academic Research"/>
+        <Field Name="Licensee" Value="University of Notre Dame"/>
+        <Field Name="Number of Users" Value="1"/>
+        <Field Name="Expiration Date" Value="2021-10-30"/>
+        <Field Name="Support Expiration Date" Value="2021-10-30"/>
+        <Field Name="Comment" Value="[Academia] Research"/>
+        <Restriction Name="Server Use" Value="Not Allowed"/>
+        <Signature Value="MC0CFQCIce0NO/FuGroPAtXsXA288e6a+wIUJIkpdV1r3+0Otf9z94G5LsmrtrA="/>
+    </License>
+    <License>
+        <Field Name="Software" Value="Structure Search"/>
+        <Field Name="License Term" Value="Academic Research"/>
+        <Field Name="Licensee" Value="University of Notre Dame"/>
+        <Field Name="Number of Users" Value="1"/>
+        <Field Name="Expiration Date" Value="2021-10-30"/>
+        <Field Name="Support Expiration Date" Value="2021-10-30"/>
+        <Field Name="Comment" Value="[Academia] Research"/>
+        <Restriction Name="Server Use" Value="Not Allowed"/>
+        <Signature Value="MCwCFFIgxfPlUrSn2vX6wNCj6S6dN9rKAhRp07O7XVCU8AgVlMzC0+h/Qb1v5Q=="/>
+    </License>
+    <License>
+        <Field Name="Software" Value="IUPAC naming plugin"/>
+        <Field Name="License Term" Value="Academic Research"/>
+        <Field Name="Licensee" Value="University of Notre Dame"/>
+        <Field Name="Number of Users" Value="1"/>
+        <Field Name="Expiration Date" Value="2021-10-30"/>
+        <Field Name="Support Expiration Date" Value="2021-10-30"/>
+        <Field Name="Comment" Value="[Academia] Research"/>
+        <Restriction Name="Server Use" Value="Not Allowed"/>
+        <Signature Value="MCwCFEaXz/1uHZlS/Z/m/ooMC7ou8W7SAhRQRzC4By29+eL8D5Y8OHKsfuLg4A=="/>
+    </License>
+    <License>
+        <Field Name="Software" Value="Web Services Server"/>
+        <Field Name="License Term" Value="Academic Research"/>
+        <Field Name="Licensee" Value="University of Notre Dame"/>
+        <Field Name="Number of Users" Value="1"/>
+        <Field Name="Expiration Date" Value="2021-10-30"/>
+        <Field Name="Support Expiration Date" Value="2021-10-30"/>
+        <Field Name="Comment" Value="[Academia] Research"/>
+        <Restriction Name="Server Use" Value="Not Allowed"/>
+        <Signature Value="MCwCFCj9q5sOfyeUhlecuNgHQj5KprftAhRO4ND6WIyWZHjzE4KDhuTBfg96RQ=="/>
+    </License>
+    <License>
+        <Field Name="Software" Value="Structure Checker"/>
+        <Field Name="License Term" Value="Academic Research"/>
+        <Field Name="Licensee" Value="University of Notre Dame"/>
+        <Field Name="Number of Users" Value="1"/>
+        <Field Name="Expiration Date" Value="2021-10-30"/>
+        <Field Name="Support Expiration Date" Value="2021-10-30"/>
+        <Field Name="Comment" Value="[Academia] Research"/>
+        <Restriction Name="Server Use" Value="Not Allowed"/>
+        <Signature Value="MCwCFDjcjXlqSFAl/YMY3TFWnwRt7zoTAhQUaByla6g/qGCe/DDijQUc4XFjoA=="/>
+    </License>
+    <License>
+        <Field Name="Software" Value="Predictor Plugin"/>
+        <Field Name="License Term" Value="Academic Research"/>
+        <Field Name="Licensee" Value="University of Notre Dame"/>
+        <Field Name="Number of Users" Value="1"/>
+        <Field Name="Expiration Date" Value="2021-10-30"/>
+        <Field Name="Support Expiration Date" Value="2021-10-30"/>
+        <Field Name="Comment" Value="[Academia] Research"/>
+        <Restriction Name="Server Use" Value="Not Allowed"/>
+        <Signature Value="MCwCFC8VbcNmi3u9B4VtqMhs6stljjhJAhQPul5Nh/GgVpwGS8AV97HKtJHgRQ=="/>
+    </License>
+    <License>
+        <Field Name="Software" Value="MCES"/>
+        <Field Name="License Term" Value="Academic Research"/>
+        <Field Name="Licensee" Value="University of Notre Dame"/>
+        <Field Name="Number of Users" Value="1"/>
+        <Field Name="Expiration Date" Value="2021-10-30"/>
+        <Field Name="Support Expiration Date" Value="2021-10-30"/>
+        <Field Name="Comment" Value="[Academia] Research"/>
+        <Restriction Name="Server Use" Value="Not Allowed"/>
+        <Signature Value="MCwCFHbQcdt6meqsyQaCiYOLQcTZJhFPAhQVbpuN03MS3U1aPX5v0wzKSUgd1Q=="/>
+    </License>
+    <License>
+        <Field Name="Software" Value="3D Screen"/>
+        <Field Name="License Term" Value="Academic Research"/>
+        <Field Name="Licensee" Value="University of Notre Dame"/>
+        <Field Name="Number of Users" Value="1"/>
+        <Field Name="Expiration Date" Value="2021-10-30"/>
+        <Field Name="Support Expiration Date" Value="2021-10-30"/>
+        <Field Name="Comment" Value="[Academia] Research"/>
+        <Restriction Name="Server Use" Value="Not Allowed"/>
+        <Signature Value="MC0CFD4e9gRo0CLtybMIMh3kvmIflxiHAhUAgDgKXlE0vcgXNNBAr9+ehOx8kXg="/>
+    </License>
+    <License>
+        <Field Name="Software" Value="Molecular Descriptors"/>
+        <Field Name="License Term" Value="Academic Research"/>
+        <Field Name="Licensee" Value="University of Notre Dame"/>
+        <Field Name="Number of Users" Value="1"/>
+        <Field Name="Expiration Date" Value="2021-10-30"/>
+        <Field Name="Support Expiration Date" Value="2021-10-30"/>
+        <Field Name="Comment" Value="[Academia] Research"/>
+        <Restriction Name="Server Use" Value="Not Allowed"/>
+        <Signature Value="MC0CFQCASBvJORZHTlqp29Of+zy/gm9CCAIUJ6mAuYtKlbA8rURqtxi/KPSm3bA="/>
+    </License>
+    <License>
+        <Field Name="Software" Value="Instant JChem VIZ"/>
+        <Field Name="License Term" Value="Academic Research"/>
+        <Field Name="Licensee" Value="University of Notre Dame"/>
+        <Field Name="Number of Users" Value="1"/>
+        <Field Name="Expiration Date" Value="2021-10-30"/>
+        <Field Name="Support Expiration Date" Value="2021-10-30"/>
+        <Field Name="Comment" Value="[Academia] Research"/>
+        <Restriction Name="Server Use" Value="Not Allowed"/>
+        <Signature Value="MCwCFCXDtjyPV+nvGdOfjz8kFHkhlnInAhRwqONZcSoH4iUTf0Qqgd0gLQ5oUg=="/>
+    </License>
+    <License>
+        <Field Name="Software" Value="ECFP/FCFP"/>
+        <Field Name="License Term" Value="Academic Research"/>
+        <Field Name="Licensee" Value="University of Notre Dame"/>
+        <Field Name="Number of Users" Value="1"/>
+        <Field Name="Expiration Date" Value="2021-10-30"/>
+        <Field Name="Support Expiration Date" Value="2021-10-30"/>
+        <Field Name="Comment" Value="[Academia] Research"/>
+        <Restriction Name="Server Use" Value="Not Allowed"/>
+        <Signature Value="MCwCFARbjIEsraHo/n+G+ihN1C7PIjGVAhRImNz6pJcKTylr71Jn7Ip7iMSEYg=="/>
+    </License>
+    <License>
+        <Field Name="Software" Value="Document to Structure"/>
+        <Field Name="License Term" Value="Academic Research"/>
+        <Field Name="Licensee" Value="University of Notre Dame"/>
+        <Field Name="Number of Users" Value="1"/>
+        <Field Name="Expiration Date" Value="2021-10-30"/>
+        <Field Name="Support Expiration Date" Value="2021-10-30"/>
+        <Field Name="Comment" Value="[Academia] Research"/>
+        <Restriction Name="Server Use" Value="Not Allowed"/>
+        <Signature Value="MCwCFDC2B5W2yp0vk+THBvZXBkMqGeCMAhQm8XtBWrjMIecozwXoW7DrIVM2cA=="/>
+    </License>
+    <License>
+        <Field Name="Software" Value="Structure to Name"/>
+        <Field Name="License Term" Value="Academic Research"/>
+        <Field Name="Licensee" Value="University of Notre Dame"/>
+        <Field Name="Number of Users" Value="1"/>
+        <Field Name="Expiration Date" Value="2021-10-30"/>
+        <Field Name="Support Expiration Date" Value="2021-10-30"/>
+        <Field Name="Comment" Value="[Academia] Research"/>
+        <Restriction Name="Server Use" Value="Not Allowed"/>
+        <Signature Value="MCwCFCfE1u7Hh/V3/4AX2MIq/w2AydZyAhQ7Kh1jD20f0r0J+ONFGh3haqw6fQ=="/>
+    </License>
+    <License>
+        <Field Name="Software" Value="NMR Predictor"/>
+        <Field Name="License Term" Value="Academic Research"/>
+        <Field Name="Licensee" Value="University of Notre Dame"/>
+        <Field Name="Number of Users" Value="1"/>
+        <Field Name="Expiration Date" Value="2021-10-30"/>
+        <Field Name="Support Expiration Date" Value="2021-10-30"/>
+        <Field Name="Comment" Value="[Academia] Research"/>
+        <Restriction Name="Server Use" Value="Not Allowed"/>
+        <Signature Value="MCwCFHwLPW/Rmf9KzACv+nS/VB44+uqwAhRwQbv6cH2h7mxJbFB0boCujnxJhA=="/>
+    </License>
+    <License>
+        <Field Name="Software" Value="JChem for Office"/>
+        <Field Name="License Term" Value="Academic Research"/>
+        <Field Name="Licensee" Value="University of Notre Dame"/>
+        <Field Name="Number of Users" Value="1"/>
+        <Field Name="Expiration Date" Value="2021-10-30"/>
+        <Field Name="Support Expiration Date" Value="2021-10-30"/>
+        <Field Name="Comment" Value="[Academia] Research"/>
+        <Restriction Name="Server Use" Value="Not Allowed"/>
+        <Signature Value="MCwCFAnrsTBwYm/pyk7T8IVDG2voEzEKAhQVPzVBQUAyVBO2wUMvMjDx+UqCmg=="/>
+    </License>
+    <License>
+        <Field Name="Software" Value="Markush Editor"/>
+        <Field Name="License Term" Value="Academic Research"/>
+        <Field Name="Licensee" Value="University of Notre Dame"/>
+        <Field Name="Number of Users" Value="1"/>
+        <Field Name="Expiration Date" Value="2021-10-30"/>
+        <Field Name="Support Expiration Date" Value="2021-10-30"/>
+        <Field Name="Comment" Value="[Academia] Research"/>
+        <Restriction Name="Server Use" Value="Not Allowed"/>
+        <Signature Value="MCwCFBOgmpXhvAZiwYPhEt8NbKc3g9f5AhQHevl3stqfkPwRMR85UAoJbd8YlQ=="/>
+    </License>
+    <License>
+        <Field Name="Software" Value="Solubility Plugin"/>
+        <Field Name="License Term" Value="Academic Research"/>
+        <Field Name="Licensee" Value="University of Notre Dame"/>
+        <Field Name="Number of Users" Value="1"/>
+        <Field Name="Expiration Date" Value="2021-10-30"/>
+        <Field Name="Support Expiration Date" Value="2021-10-30"/>
+        <Field Name="Comment" Value="[Academia] Research"/>
+        <Restriction Name="Server Use" Value="Not Allowed"/>
+        <Signature Value="MCwCFDxN7oKTZA9SLMVwTAqOpORnWQE5AhQkPkFvtXLhqY1/R9p/YGCxzMfvYQ=="/>
+    </License>
+    <License>
+        <Field Name="Software" Value="Structural Calculations"/>
+        <Field Name="License Term" Value="Academic Research"/>
+        <Field Name="Licensee" Value="University of Notre Dame"/>
+        <Field Name="Number of Users" Value="1"/>
+        <Field Name="Expiration Date" Value="2021-10-30"/>
+        <Field Name="Support Expiration Date" Value="2021-10-30"/>
+        <Field Name="Comment" Value="[Academia] Research"/>
+        <Restriction Name="Server Use" Value="Not Allowed"/>
+        <Signature Value="MCwCFAXwzrVBf/ye3XjqitzhrfmNig3+AhQWOld0BZ2it5QgOwwiv+LoA3tZjg=="/>
+    </License>
+    <License>
+        <Field Name="Software" Value="Charge Plugin Group"/>
+        <Field Name="License Term" Value="Academic Research"/>
+        <Field Name="Licensee" Value="University of Notre Dame"/>
+        <Field Name="Number of Users" Value="1"/>
+        <Field Name="Expiration Date" Value="2021-10-30"/>
+        <Field Name="Support Expiration Date" Value="2021-10-30"/>
+        <Field Name="Comment" Value="[Academia] Research"/>
+        <Restriction Name="Server Use" Value="Not Allowed"/>
+        <Signature Value="MCwCFE98x+p8Myd1CwOiVLD2iHibItTaAhRNCUBzZ3ckE+5UwbsZeMiF9U9QHQ=="/>
+    </License>
+    <License>
+        <Field Name="Software" Value="Conformation Plugin Group"/>
+        <Field Name="License Term" Value="Academic Research"/>
+        <Field Name="Licensee" Value="University of Notre Dame"/>
+        <Field Name="Number of Users" Value="1"/>
+        <Field Name="Expiration Date" Value="2021-10-30"/>
+        <Field Name="Support Expiration Date" Value="2021-10-30"/>
+        <Field Name="Comment" Value="[Academia] Research"/>
+        <Restriction Name="Server Use" Value="Not Allowed"/>
+        <Signature Value="MC0CFAkwxr9x137HaBbqBNhW50EitrTVAhUAi54phjW2PXPXHbqYf0kVGHQIg6Y="/>
+    </License>
+    <License>
+        <Field Name="Software" Value="Geometry Plugin Group"/>
+        <Field Name="License Term" Value="Academic Research"/>
+        <Field Name="Licensee" Value="University of Notre Dame"/>
+        <Field Name="Number of Users" Value="1"/>
+        <Field Name="Expiration Date" Value="2021-10-30"/>
+        <Field Name="Support Expiration Date" Value="2021-10-30"/>
+        <Field Name="Comment" Value="[Academia] Research"/>
+        <Restriction Name="Server Use" Value="Not Allowed"/>
+        <Signature Value="MCwCFB9d3iq2ZKfCROear79dmIY62glBAhQSXMhryqzYPU+PYrY4kl9hOxvQSA=="/>
+    </License>
+    <License>
+        <Field Name="Software" Value="Huckel Analysis Plugin"/>
+        <Field Name="License Term" Value="Academic Research"/>
+        <Field Name="Licensee" Value="University of Notre Dame"/>
+        <Field Name="Number of Users" Value="1"/>
+        <Field Name="Expiration Date" Value="2021-10-30"/>
+        <Field Name="Support Expiration Date" Value="2021-10-30"/>
+        <Field Name="Comment" Value="[Academia] Research"/>
+        <Restriction Name="Server Use" Value="Not Allowed"/>
+        <Signature Value="MCwCFHVKAvfgFEC36MqKPXRQfn7aAnJIAhR8QraA1nCEHoRYGaScJgJ8+6cHaQ=="/>
+    </License>
+    <License>
+        <Field Name="Software" Value="Refractivity Plugin"/>
+        <Field Name="License Term" Value="Academic Research"/>
+        <Field Name="Licensee" Value="University of Notre Dame"/>
+        <Field Name="Number of Users" Value="1"/>
+        <Field Name="Expiration Date" Value="2021-10-30"/>
+        <Field Name="Support Expiration Date" Value="2021-10-30"/>
+        <Field Name="Comment" Value="[Academia] Research"/>
+        <Restriction Name="Server Use" Value="Not Allowed"/>
+        <Signature Value="MCwCFA/RhhdLUO4A3C+4njO001IyN+k9AhR0+B5m51e375bQq64JihFwAF4cTQ=="/>
+    </License>
+    <License>
+        <Field Name="Software" Value="HBDA Plugin"/>
+        <Field Name="License Term" Value="Academic Research"/>
+        <Field Name="Licensee" Value="University of Notre Dame"/>
+        <Field Name="Number of Users" Value="1"/>
+        <Field Name="Expiration Date" Value="2021-10-30"/>
+        <Field Name="Support Expiration Date" Value="2021-10-30"/>
+        <Field Name="Comment" Value="[Academia] Research"/>
+        <Restriction Name="Server Use" Value="Not Allowed"/>
+        <Signature Value="MC0CFQCPAHOKJDWES9CSIvEDHeGslpkrTAIUUMKN5OgRTmcJTdaYcrGRyXgcIaQ="/>
+    </License>
+    <License>
+        <Field Name="Software" Value="3D Alignment"/>
+        <Field Name="License Term" Value="Academic Research"/>
+        <Field Name="Licensee" Value="University of Notre Dame"/>
+        <Field Name="Number of Users" Value="1"/>
+        <Field Name="Expiration Date" Value="2021-10-30"/>
+        <Field Name="Support Expiration Date" Value="2021-10-30"/>
+        <Field Name="Comment" Value="[Academia] Research"/>
+        <Restriction Name="Server Use" Value="Not Allowed"/>
+        <Signature Value="MCwCFAYAe7plQbkQ20Y5yu7nbT1w3U/wAhQ6YWVlsOW6A3nYMWYarr+OH26vMg=="/>
+    </License>
+    <License>
+        <Field Name="Software" Value="Structural Frameworks Plugin"/>
+        <Field Name="License Term" Value="Academic Research"/>
+        <Field Name="Licensee" Value="University of Notre Dame"/>
+        <Field Name="Number of Users" Value="1"/>
+        <Field Name="Expiration Date" Value="2021-10-30"/>
+        <Field Name="Support Expiration Date" Value="2021-10-30"/>
+        <Field Name="Comment" Value="[Academia] Research"/>
+        <Restriction Name="Server Use" Value="Not Allowed"/>
+        <Signature Value="MCwCFF84D9Ln+NQMDkpMnVv4GLkBDqQzAhRj+1v0a000kfQMb801ta2mBH2SlA=="/>
+    </License>
+</ChemAxon>

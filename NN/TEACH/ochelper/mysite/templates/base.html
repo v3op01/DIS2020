@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!DOCTYPE html>
+    <title>W3.CSS Template</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    {% load static %}
+    <link type="text/css" rel="stylesheet" href="{% static 'marvinjs/gui/css/editor.min.css' %}" media="screen" />
+    <link type="text/css" rel="stylesheet" href="{% static 'marvinjs/js/lib/rainbow/github.css' %}" media="screen" />
+    <!-- from editorws.html -->
+    <script src="{% static 'marvinjs/gui/lib/promise-1.0.0.min.js' %}"></script>
+    <script src="{% static 'marvinjs/js/marvinjslauncher.js' %}"></script>
+    <script src="{% static 'marvinjs/gui/gui.nocache.js' %}"></script>
+    
+    
+    <script src="{% static 'marvinjs/js/lib/rainbow/rainbow-custom.min.js' %}"></script>
+    
+    <!-- Editor -->
+    <script src="{% static 'marvinjs/js/lib/jquery-1.9.1.min.js' %}"></script>
+    <script src="{% static 'marvinjs/js/webservices.js' %}"></script>
+    <script src="{% static 'marvinjs/js/util.js' %}"></script>
+
+    <style>
+        html,
+        body,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5 {
+            font-family: "Raleway", sans-serif
+        }
+    </style>
+    
+    <script>
+        function s()
+
+        function showInput() {
+            input = document.getElementById("search_input").value;
+            document.getElementById('display').innerHTML = input + "Addition";
+        }
+        var marvinSketcherInstance;
+
+            $(document).ready(function handleDocumentReady(e) {
+                getMarvinPromise("#sketch").done(function (sketcherInstance) {
+                    marvinSketcherInstance = sketcherInstance;
+
+                    $("#getSmilesButton").on("click", function handleGetSmilesButton() {
+                        smilesControl.getSmiles();
+                    });
+
+                    $("#setSmilesButton").on("click", function handleGetSmilesButton() {
+                        smilesControl.setSmiles();
+                    });
+
+                    $("#resetButton").on("click", function handleGetSmilesButton() {
+                        smilesControl.reset();
+                    });
+
+                }).fail(function () {
+                    alert("Cannot retrieve sketcher instance from iframe");
+                });
+            });
+
+            var errorConsole = (function () {
+                var controlObject = {
+                    "reset": function () {
+                        $("#error").children("p").html("");
+                    }
+                    , "print": function (txt) {
+                        $("#error").children("p").html(txt);
+                    }
+                    , "isEmpty": function () {
+                        return ($("#error").children("p").html() === "");
+                    }
+                };
+
+                return controlObject;
+
+            }());
+
+            var smilesControl = (function () {
+
+                function getMolConvertURL() {
+                    var ws = getDefaultServices();
+                    return ws['molconvertws'];
+                };
+
+                function handleRequestError(qXHR, textStatus, errorThrown) {
+                    if (qXHR.status == 0) { // UNSENT request
+                        var errMsg = "ERROR: MolConvert failed.\nThe request has not been sent.\nThe request may violate the cross domain policy.";
+                        errorConsole.print(errMsg);
+                    } else {
+                        errorConsole.print("ERROR: MolConvert failed (status code " + qXHR.status + ")\n" + qXHR.responseText);
+                    }
+                };
+
+                var controlObject = {
+
+                    "getSmiles": function getSmiles() {
+                        errorConsole.reset();
+                        var s = marvinSketcherInstance.exportAsMrv();
+                        var data = JSON.stringify({
+                            "structure": s,
+                            "inputFormat": "mrv",
+                            "parameters": "smiles"
+                        });
+
+                        $.ajax({
+                            "url": getMolConvertURL()
+                            , "type": "POST"
+                            , "dataType": "json"
+                            , "contentType": "application/json"
+                            , "data": data
+                        }).done(function (data, textStatus, jqXHR) {
+                            $("#smiles").val(data['structure']);
+                        }).fail(handleRequestError);
+                    }
+
+                    , "setSmiles": function setSmiles() {
+                        errorConsole.reset();
+                        var s = $("#smiles").val();
+                        if (s == null || s == "") {
+                            marvinSketcherInstance.importAsMrv(null);
+                        } else {
+                            var data = JSON.stringify({
+                                "structure": s,
+                                "inputFormat": "smiles",
+                                "parameters": "mrv"
+                            });
+
+                            $.ajax({
+                                "url": getMolConvertURL()
+                                , "type": "POST"
+                                , "dataType": "json"
+                                , "contentType": "application/json"
+                                , "data": data
+                            }).done(function (data, textStatus, jqXHR) {
+                                marvinSketcherInstance.importAsMrv(data['structure']);
+                            }).fail(handleRequestError);
+                        }
+                    }
+
+                    , "reset": function reset() {
+                        $("#smiles").val("");
+                        errorConsole.reset();
+                    }
+                }
+
+                return controlObject;
+
+            }());
+
+
+
+        window.addEventListener("message", function (event) {
+            try {
+                var externalCall = JSON.parse(event.data);
+                marvin.onReady(function () {
+                    marvin.sketcherInstance[externalCall.method].apply(marvin.sketcherInstance, externalCall.args);
+                });
+            } catch (e) {
+                console.log(e);
+            }
+        }, false);
+
+
+
+
+
+        // called when Marvin JS loaded
+        function sketchOnLoad() {
+            if (marvin.Sketch.isSupported()) {
+                marvin.sketcherInstance = new marvin.Sketch("sketch");
+                marvin.sketcherInstance.setServices(getDefaultServices());
+            } else {
+                alert("Cannot initiate sketcher. Current browser may not support HTML canvas or may run in Compatibility Mode.");
+            }
+        }
+    </script>
+
+</head>
+
+<body>
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+</body>
+
+</html>

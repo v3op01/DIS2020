@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'smiles_db/style.css' %}">
+<head>
+    <style>
+        table,
+        th,
+        td {
+            align="left";
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+<h1>Search SMILES strings </h1>
+<form action="{% url 'search_results' %}" method="get">
+    <input name="q" type="text" placeholder="Search...">
+    <input type="submit" value="Search">
+</form>
+
+<h1>Molecule List</h1>
+
+
+<!-- Searched result and links to such with  -->
+<ul><table style="width:100%">
+    <tr>
+        <th align="left" width=40%> SMILES string</th>
+        <th align="left" width=60%> Molecule Name</th>
+    </tr>
+    {% for molecule in object_list %}
+    
+        <tr >
+            <!-- href: current path smiles_db/search -->
+            <th  align="left" width=40%><a href="../{{molecule.id}}/"> {{ molecule.smiles}}</a></th>
+            <td>{{ molecule.name }}</td>
+        </tr>
+    {% endfor %}
+</table>
+</ul>
+</body>
+</html>

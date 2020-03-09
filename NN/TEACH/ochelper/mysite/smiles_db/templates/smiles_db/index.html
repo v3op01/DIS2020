@@ -1,0 +1,16 @@
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'smiles_db/style.css' %}">
+
+
+
+
+<!-- LISTING -->
+{% if molecule_list %}
+<ul>
+    {% for molecule in molecule_list %}
+    <li><a href="{% url 'smiles_db:detail' molecule.id %}">{{ molecule.smiles }}</a></li>
+    {% endfor %}
+</ul>
+{% else %}
+    <p> Accessed from index.html</p>
+{% endif %}

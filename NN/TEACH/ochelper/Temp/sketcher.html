@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+<head>
+  <style>
+     /* Split the screen in half */
+    .split {
+      height: 100%;
+      width: 50%;
+      position: fixed;
+      z-index: 1;
+      top: 0;
+      overflow-x: hidden;
+      padding-top: 20px;
+    }
+
+    /* Control the left side */
+    .left {
+      left: 0;
+      background-color: #111;
+    }
+
+    /* Control the right side */
+    .right {
+      right: 0;
+      background-color: red;
+    }
+
+    /* If you want the content centered horizontally and vertically */
+    .centered {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+    }
+
+    /* Style the image inside the centered container, if needed */
+    .centered img {
+      width: 150px;
+      border-radius: 50%;
+} 
+  </style>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+  <title>Marvin JS</title>
+  <link type="text/css" rel="stylesheet" href="templates/gui/css/editor.min.css" media="screen" />
+  <link type="text/css" rel="stylesheet" href="templates/js/lib/rainbow/github.css">
+  <script src="templates/gui/lib/promise-1.0.0.min.js"></script>
+  <script src="templates/js/marvinjslauncher.js"></script>
+
+  <script src="templates/js/webservices.js"></script>
+  <script src="templates/gui/gui.nocache.js"></script>
+  <script src="templates/js/lib/jquery-1.9.1.min.js"></script>
+  <script src="templates/js/lib/rainbow/rainbow-custom.min.js"></script>
+  <script>
+    var marvinController,
+      inputController;
+
+    $(document).ready(function handleDocumentReady(e) {
+      MarvinJSUtil.getEditor("#sketch").then(function (sketcherInstance) {
+
+        marvinController = new MarvinControllerClass(
+          sketcherInstance,
+          $("#chbx-coloring"),
+          $("#chbx-map"),
+          $("#chbx-carbonVis")
+        );
+
+        inputController = new InputControllerClass(
+          $("#btn-setMdlmolfile"),
+          $("#btn-paste"),
+          $("#list-inputformat"),
+          $("#btn-clearTxt"),
+          $("#btn-molExport"),
+          $("#molsource-box")
+        );
+
+      }, function () {
+        // code performed when the sketcher loading fails
+        alert("Cannot retrieve sketcher instance from iframe");
+      });
+
+      $("#molsource-box").val(caffeineSource);
+    });
+
+    var InputControllerClass = (function () {
+
+      var delay = 5;
+
+      function InputControllerClass(importButton,
+        pasteButton,
+        formatDropdown,
+        resetButton,
+        molExportButton,
+        srcTextBox) {
+
+        this.importButton = importButton;
+        this.pasteButton = pasteButton;
+        this.formatDropdown = formatDropdown;
+        this.resetButton = resetButton;
+        this.molExportButton = molExportButton;
+        this.srcTextBox = srcTextBox;
+        this.init();
+      }
+
+      InputControllerClass.prototype.init = function init() {
+        this.importButton.on("click", $.proxy(this.handleImportBtnClick, this));
+        this.pasteButton.on("click", $.proxy(this.handlePasteBtnClick, this));
+        this.resetButton.on("click", $.proxy(this.clearTxt, this));
+        this.molExportButton.on("click", $.proxy(this.handleMolExportBtnClick, this));
+      };
+
+      InputControllerClass.prototype.handleImportBtnClick = function handleImportBtnClick(e) {
+        this.delayCall(importMolAction, [this.getTxt(), this.getFormat()]);
+      };
+
+      InputControllerClass.prototype.handlePasteBtnClick = function handleImportBtnClick(e) {
+        this.delayCall(pasteMolAction, [this.getTxt(), this.getFormat()]);
+      };
+
+      InputControllerClass.prototype.handleMolExportBtnClick = function handleMolExportBtnClick(e) {
+        this.delayCall(exportMolAction, [this.getFormat()]);
+      };
+
+
+
+      InputControllerClass.prototype.delayCall = function delayCall(method, args) {
+        setTimeout(function () {
+          method.apply(null, args);
+        }, delay);
+      };
+
+      InputControllerClass.prototype.getTxt = function getTxt() {
+        return this.srcTextBox.val();
+      };
+
+      InputControllerClass.prototype.setTxt = function setTxt(txt) {
+        this.srcTextBox.val(txt);
+      };
+
+      InputControllerClass.prototype.clearTxt = function clearTxt() {
+        this.setTxt("");
+      };
+
+      InputControllerClass.prototype.getFormat = function getFormat(e) {
+        return this.formatDropdown.val();
+      };
+
+      return InputControllerClass;
+
+    }());
+
+    var MarvinControllerClass = (function () {
+
+      function MarvinControllerClass(sketcherInstance, cpkCheckbox, mapCheckbox, carbonCheckbox) {
+        this.sketcherInstance = sketcherInstance;
+        this.cpkCheckbox = cpkCheckbox;
+        this.mapCheckbox = mapCheckbox;
+        this.carbonCheckbox = carbonCheckbox;
+        this.init();
+      }
+
+      MarvinControllerClass.prototype.init = function init() {
+        this.carbonCheckbox.on("change", $.proxy(this.handleCarbonCheckBoxChange, this));
+        this.mapCheckbox.on("change", $.proxy(this.handleMapCheckBoxChange, this));
+        this.cpkCheckbox.on("change", $.proxy(this.handleCpkCheckBoxChange, this));
+      };
+
+      MarvinControllerClass.prototype.handleCarbonCheckBoxChange = function handleCarbonCheckBoxChange(e) {
+        this.sketcherInstance.setDisplaySettings({
+          "carbonLabelVisible": this.carbonCheckbox.is(':checked')
+        });
+      };
+
+      MarvinControllerClass.prototype.handleMapCheckBoxChange = function handleMapCheckBoxChange(e) {
+        this.sketcherInstance.setDisplaySettings({
+          "atomMapsVisible": this.mapCheckbox.is(':checked')
+        });
+      };
+
+      MarvinControllerClass.prototype.handleCpkCheckBoxChange = function handleCpkCheckBoxChange(e) {
+        this.sketcherInstance.setDisplaySettings({
+          "cpkColoring": this.cpkCheckbox.is(':checked')
+        });
+      };
+
+      return MarvinControllerClass;
+
+    }());
+
+    var caffeineSource = "CN1C=NC2=C1C(=O)N(C)C(=O)N2C";
+
+    function pasteMolAction(txt, format) {
+      var pastePromise = marvinController.sketcherInstance.pasteStructure(format, txt);
+      pastePromise.then(function () { }, function (error) {
+        alert(error);
+      });
+    }
+
+    function importMolAction(txt, format) {
+      var importPromise = marvinController.sketcherInstance.importStructure(format, txt);
+      importPromise.then(function () { }, function (error) {
+        alert(error);
+      });
+    }
+
+    function exportMolAction(format) {
+      var ic = inputController;
+
+      var exportPromise = marvinController.sketcherInstance.exportStructure(format, null);
+      exportPromise.then(function (source) {
+        ic.setTxt(source);
+      }, function (error) {
+        ic.setTxt(error);
+      });
+    }
+  </script>
+  <script>
+
+    window.addEventListener("message", function (event) {
+      try {
+        var externalCall = JSON.parse(event.data);
+        marvin.onReady(function () {
+          marvin.sketcherInstance[externalCall.method].apply(marvin.sketcherInstance, externalCall.args);
+        });
+      } catch (e) {
+        console.log(e);
+      }
+    }, false);
+
+
+    // called when Marvin JS loaded
+    function sketchOnLoad() {
+      if (marvin.Sketch.isSupported()) {
+        marvin.sketcherInstance = new marvin.Sketch("sketch");
+        marvin.sketcherInstance.setServices(getDefaultServices());
+      } else {
+        alert("Cannot initiate sketcher. Current browser may not support HTML canvas or may run in Compatibility Mode.");
+      }
+    }
+
+  </script>
+</head>
+
+<body>
+<!-- Marvin JS Editor -->
+<div >
+  
+    <div class="resizable" style="width: 500px; height: 500px;">
+      <noscript>
+        <div>
+          <p>Your web browser must have JavaScript enabled in order for this
+            application to display correctly.</p>
+        </div>
+      </noscript>
+      <div id="sketch"></div>
+    </div>
+</div>
+
+<!-- Needed for SMILES -->
+<div style="split right">
+    <div class="molecule-div" style="float:left">
+      <ul class="horizontalmenu">
+        <li>
+          <input type="button" id="btn-setMdlmolfile" value="Import to Editor">
+          <span>text as</span>
+          <select id="list-inputformat">
+            <option value="smiles">SMILES</option>
+            <option value="name">IUPAC name</option>
+          </select>
+        </li>
+        <li>&nbsp;</li>
+        <li><input type="button" id="btn-clearTxt" value="Reset text"></li>
+        <li><input type="button" id="btn-molExport" value="Export from Editor"></li>
+      </ul>
+      <form>
+        <textarea id="molsource-box"></textarea>
+      </form>
+    </div>
+</div>
+
+
+</body>
+</html>
+

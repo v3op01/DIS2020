@@ -1,0 +1,9 @@
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'smiles_db/style.css' %}">
+
+
+<h1>Search SMILES string in Database</h1>
+<form action="{% url 'search_results' %}" method="get">
+    <input name="q" type="text" placeholder="Search...">
+    <input type="submit" value="Search">
+</form>

@@ -1,0 +1,6 @@
+
+body {
+    /* background: url("images/bg1.jpg") repeat; */
+    background: hsla(0, 0, 5, 1); ;
+    background-size: cover;
+}

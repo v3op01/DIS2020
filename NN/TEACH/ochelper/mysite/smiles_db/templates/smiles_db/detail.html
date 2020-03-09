@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'smiles_db/style_1.css' %}">
+    <style>
+        table,
+        th,
+        td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            padding: 5px;
+            text-align: left;
+        }
+    </style>
+    <script type="text/javascript" src="../../../templates/jsmol/JSmol.min.js"></script>
+    <script type="text/javascript">
+        
+            $(document).ready(function () {
+                Jmol.script(myJmol, 'load ../../../templates/jsmol/data/caffeine.xyz');
+            });
+
+        Jmol._isAsync = false;
+
+        // last update 2/18/2014 2:10:06 PM
+
+        var jmolApplet0; // set up in HTML table, below
+
+        // logic is set by indicating order of USE -- default is HTML5 for this test page, though
+
+        var s = document.location.search;
+
+        // Developers: The _debugCode flag is checked in j2s/core/core.z.js, 
+        // and, if TRUE, skips loading the core methods, forcing those
+        // to be read from their individual directories. Set this
+        // true if you want to do some code debugging by inserting
+        // System.out.println, document.title, or alert commands
+        // anywhere in the Java or Jmol code.
+
+        Jmol._debugCode = (s.indexOf("debugcode") >= 0);
+
+        jmol_isReady = function (applet) {
+            document.title = (applet._id + " - Jmol " + Jmol.___JmolVersion)
+            Jmol._getElement(applet, "appletdiv").style.border = "1px solid blue"
+        }
+
+        var Info = {
+            width: 420,
+            height: 300,
+            debug: false,
+            color: "0xFFFFFF",
+            addSelectionOptions: true,
+            use: "HTML5",   // JAVA HTML5 WEBGL are all options
+            j2sPath: "./j2s", // this needs to point to where the j2s directory is.
+            jarPath: "./java",// this needs to point to where the java directory is.
+            jarFile: "JmolAppletSigned.jar",
+            isSigned: true,
+            script: "set zoomlarge false;set antialiasDisplay;load data/caffeine.mol",
+            serverURL: "https://chemapps.stolaf.edu/jmol/jsmol/php/jsmol.php",
+            readyFunction: jmol_isReady,
+            disableJ2SLoadMonitor: true,
+            disableInitialConsole: true,
+            allowJavaScript: true
+            //defaultModel: "$dopamine",
+            //console: "none", // default will be jmolApplet0_infodiv, but you can designate another div here or "none"
+        }
+
+        $(document).ready(function () {
+            $("#appdiv").html(Jmol.getAppletHtml("jmolApplet0", Info))
+        })
+        var lastPrompt = 0;
+    </script>
+</head>
+<body>
+    <h1>Search SMILES strings</h1>
+    <form action="{% url 'search_results' %}" method="get">
+        <input name="q" type="text" placeholder="Search...">
+        <input type="submit" value="Search">
+    </form>
+
+    <p> Another Seach bar should be here </p>
+
+    <h1>{{molecule.smiles}}</h1>
+    <p> 2D representation (using Marvin) </p>
+    <h2> smiles_db/templates/smiles_db/detail.html</h2>
+    <p> for a Given SMILES string, give 3 lowest conformers and its electronic structure properties</p>
+
+    <table style="width:100%">
+        <tr>
+            <th>Conformer</th>
+            <td>Lowest</td>
+            <td>Lowest-1</td>
+            <td>Lowest-2</td>
+        </tr>
+        <tr>
+            <th>3d Viewer</th>
+            <td>
+                <div id="myJmol_appletdiv"
+                style="z-index: 9001; width: 100%; height: 100%; position: absolute; top: 0px; left: 0px; background-repeat: no-repeat; background-position: center center; display: block;">
+                <script type="text/javascript">myJmol._cover(false)</script>
+                <canvas style="width: 100%; height: 100%; z-index: 9002;" width="342" height="342" id="myJmol_canvas2d"></canvas>
+                </div>
+            </td>
+            <td>Lowest-1</td>
+            <td>Lowest-2</td>
+        </tr>
+        <tr>
+            <th>3d Viewer</th>
+            <td>Lowest</td>
+            <td>Lowest-1</td>
+            <td>Lowest-2</td>
+        </tr>
+
+        <tr>
+            <th>3d Viewer</th>
+            <td>Lowest</td>
+            <td>Lowest-1</td>
+            <td>Lowest-2</td>
+        </tr>
+
+        <tr>
+            <th>3d Viewer</th>
+            <td>Lowest</td>
+            <td>Lowest-1</td>
+            <td>Lowest-2</td>
+        </tr>
+    </table>
+
+</body>
+
+</html>
+
+
+{% if error_message %}<p><strong>{{error_message}</strong></p>{% endif %}
+<!-- 
+
+
+<ul>
+    {% for choice in question.choice_set.all %}
+        <li>{{choice.choice_text}}</li>
+    {% endfor %}
+</ul> -->

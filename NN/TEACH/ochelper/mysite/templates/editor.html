@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+        <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+        <title>Marvin JS</title>
+
+        {% load static %}
+        <link type="text/css" rel="stylesheet" href="{% static 'marvinjs/gui/css/editor.min.css' %}" media="screen" />
+        <link type="text/css" rel="stylesheet" href="{% static 'marvinjs/js/lib/rainbow/github.css' %}" media="screen" />  
+        
+        <!-- button -->
+        <script src="{% static 'marvinjs/js/lib/jquery-1.9.1.min.js' %}"></script>
+        <script src="{% static 'marvinjs/js/webservices.js' %}"></script>
+        <script src="{% static 'marvinjs/js/util.js' %}"></script>
+    
+        <script>
+            var marvinSketcherInstance;
+
+
+        </script>
+    </head>
+        
+    <body>
+        <!-- Needed for SMILES -->
+        <div class="container">
+            <div class="molecule-div" style="float:left">
+                <ul class="horizontalmenu">
+                    <input type="button" class="w3-button w3-pale-red w3-round-large" value="STRUCTURE -> SMILES">
+                    <input type="button" class="w3-button w3-pale-blue w3-round-large" value="SMILES -> STRUCTURE">
+                    <p>
+                        <form>
+                            <textarea id="molsource-box" cols="150"></textarea>
+                        </form>
+                    </p>
+
+
+                    <button class="w3-button w3-teal w3-round-large"> ??? </button>
+                    <li>
+                        <input type="button" id="btn-setMdlmolfile" value="Import to Editor">
+                        <span>text as</span>
+                        <select id="list-inputformat">
+                            <option value="smiles">SMILES</option>
+                            <option value="name">IUPAC name</option>
+                        </select>
+                    </li>
+                    <li>&nbsp;</li>
+                    <li><input type="button" id="btn-clearTxt" value="Reset text"></li>
+                    <li><input type="button" id="btn-molExport" value="Export from Editor"></li>
+                </ul>
+            </div>
+        </div>
+    </body>
+{% endblock %}

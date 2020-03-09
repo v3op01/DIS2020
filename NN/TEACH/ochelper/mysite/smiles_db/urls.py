@@ -1,0 +1,37 @@
+"""mysite URL Configuration
+
+The `urlpatterns` list routes URLs to views. For more information please see:
+    https://docs.djangoproject.com/en/2.2/topics/http/urls/
+Examples:
+Function views
+    1. Add an import:  from my_app import views
+    2. Add a URL to urlpatterns:  path('', views.home, name='home')
+Class-based views
+    1. Add an import:  from other_app.views import Home
+    2. Add a URL to urlpatterns:  path('', Home.as_view(), name='home')
+Including another URLconf
+    1. Import the include() function: from django.urls import include, path
+    2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
+"""
+from django.urls import path
+from django.conf.urls import url
+from . import views
+
+
+# app_name = 'smiles_db'
+urlpatterns = [
+    # ex: /smiles_db/
+    path('', views.HomeView.as_view(), name='home'),
+    # path('<int:pk>/', views.detail, name='detail'),
+    # # ex: /smiles_db/5/
+    path('<int:pk>/', views.DetailView.as_view(), name='detail'),
+
+    # Result of Seach submit
+    path('search/', views.SearchResultsView.as_view(), name='search_results'),
+    # path('search/<int:pk>/',  views.DetailView.as_view(), name='results_detail'),
+    # path('search/', views.search_results, name='search_results'),
+    # submission of SMILES string
+    # url(r'^blabla$', views.submit_smiles, name='smiles_submit')
+    path('',views.submit_smiles, name="smiles_submit"),
+    path('your-name/', views.get_name, name="your_name"),
+]
